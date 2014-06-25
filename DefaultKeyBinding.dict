@@ -1,0 +1,158 @@
+{
+    /* select line */
+    // "@L" = ("moveToBeginningOfParagraph:", "moveParagraphForwardAndModifySelection:");
+    /* select line & trailing newline */
+    "~@L" = ("moveToBeginningOfParagraph:", "moveParagraphForwardAndModifySelection:", "moveRightAndModifySelection:");
+    /* select word */
+    "^w" = ("moveForward:", "moveWordBackward:", "moveWordForwardAndModifySelection:");
+    /* move to beginning of previous line */
+    "^~\UF700" = ("moveToBeginningOfParagraph:", "moveBackward:", "moveToBeginningOfParagraph:");
+    /* move to beginning of next line */
+    "^~\UF701" = ("moveToEndOfParagraph:", "moveForward:");
+    /* quote selection */
+    "^'" = ("deleteToBeginningOfLine:", "setMark:", "insertText:", "\"", "yank:", "insertText:", "\"", "swapWithMark:", "selectToMark:");
+        
+    /* Modifier keys: start with C-m */
+    "^m" = {
+        "^ "    = ("insertText:", "␣");  /* C-space space */
+        
+        
+        "^e"    = ("insertText:", "↩");  /* C-e     return */
+        "e"     = ("insertText:", "⌅");  /* e       enter */
+        
+        "^t"    = ("insertText:", "⇥");  /* C-t     tab */
+        "t"     = ("insertText:", "⇤");  /* t       backtab */
+        
+        "^d"    = ("insertText:", "⌫");  /* C-d     delete */
+        "d"     = ("insertText:", "⌦");  /* d       forward delete */
+        
+        "^a"    = ("insertText:", "⌘");  /* C-a     command (apple) */
+        "^o"    = ("insertText:", "⌥");  /* C-o     option */
+        "^c"    = ("insertText:", "⌃");  /* C-c     control */
+        "^s"    = ("insertText:", "⇧");  /* C-s     shift */
+        "s"     = ("insertText:", "⇪");  /* s       caps lock */
+        
+        "^b"    = ("insertText:", "←");  /* C-b     solid left */
+        "^f"    = ("insertText:", "→");  /* C-f     solid right */
+        "^p"    = ("insertText:", "↑");  /* C-p     solid up */
+        "^n"    = ("insertText:", "↓");  /* C-n     solid down */
+        "b"     = ("insertText:", "⇠");  /* f       dotted left */
+        "f"     = ("insertText:", "⇢");  /* b       dotted right */
+        "p"     = ("insertText:", "⇡");  /* p       dotted up */
+        "n"     = ("insertText:", "⇣");  /* n       dotted down */
+        
+        "^h"    = ("insertText:", "↖");  /* C-h     home */
+        "h"     = ("insertText:", "↘");  /* h       end */
+        "^u"    = ("insertText:", "⇞");  /* C-u     page up */
+        "u"     = ("insertText:", "⇟");  /* u       page down */
+        
+        "^x"    = ("insertText:", "⎋");  /* C-x     escape */ 
+        "x"     = ("insertText:", "⏏");  /* x       eject */ 
+        
+        "^/"    = ("insertText:", "‽");  /* interrobang */
+        "/"     = ("insertText:", "⸘");  /* upside-down interrobang */
+    };
+    
+    /* Greek */
+    "^g" = {
+        "^a" = ("insertText:", "α"); "A" = ("insertText:", "Α");
+        "^b" = ("insertText:", "β"); "B" = ("insertText:", "Β");
+        "^c" = ("insertText:", "ψ"); "C" = ("insertText:", "Ψ");
+        "^d" = ("insertText:", "δ"); "D" = ("insertText:", "Δ");
+        "^e" = ("insertText:", "ε"); "E" = ("insertText:", "Ε");
+        "^f" = ("insertText:", "φ"); "F" = ("insertText:", "Φ");
+        "^g" = ("insertText:", "γ"); "G" = ("insertText:", "Γ");
+        "^h" = ("insertText:", "η"); "H" = ("insertText:", "Η");
+        "^i" = ("insertText:", "ι"); "I" = ("insertText:", "Ι");
+        "^j" = ("insertText:", "ξ"); "J" = ("insertText:", "Ξ");
+        "^k" = ("insertText:", "κ"); "K" = ("insertText:", "Κ");
+        "^l" = ("insertText:", "λ"); "L" = ("insertText:", "Λ");
+        "^m" = ("insertText:", "μ"); "M" = ("insertText:", "Μ");
+        "^n" = ("insertText:", "ν"); "N" = ("insertText:", "Ν");
+        "^o" = ("insertText:", "ο"); "O" = ("insertText:", "Ο");
+        "^p" = ("insertText:", "π"); "P" = ("insertText:", "Π");
+        /* q = ; */
+        "^r" = ("insertText:", "ρ"); "R" = ("insertText:", "Ρ");
+        "^s" = ("insertText:", "σ"); "s" = ("insertText:", "ς"); "S" = ("insertText:", "Σ");
+        "^t" = ("insertText:", "τ"); "T" = ("insertText:", "Τ");
+        "^u" = ("insertText:", "θ"); "U" = ("insertText:", "Θ");
+        "^v" = ("insertText:", "ω"); "V" = ("insertText:", "Ω");
+        /* w = ; */
+        "^x" = ("insertText:", "χ"); "X" = ("insertText:", "Χ");
+        "^y" = ("insertText:", "υ"); "Y" = ("insertText:", "Υ");
+        "^z" = ("insertText:", "ζ"); "Z" = ("insertText:", "Ζ");
+    };
+    
+    /* Math */
+    "^j" = {
+        /* approx */  "^a" = ("insertText:", "≈"); "a" = ("insertText:", "≉");
+        "^p" = {
+            /* partial */      "^d" = ("insertText:", "∂");
+            /* proportional */ "^r" = ("insertText:", "∝");
+        };
+        /* divides */ "^d" = ("insertText:", "∣");
+        /* o-ops */   "^o" = { "^p" = ("insertText:", "⊕"); "^t" = ("insertText:", "⊗"); "^m" = ("insertText:", "⊖"); "^d" = ("insertText:", "⊙"); };
+        /* logic */   "^l" = {
+            "^a" = ("insertText:", "∧");
+            "^o" = ("insertText:", "∨");
+            "^n" = ("insertText:", "¬");
+            "^i" = ("insertText:", "→");
+            "i"  = ("insertText:", "⇒");
+            "I"  = ("insertText:", "⇐");
+            "^e" = ("insertText:", "∃"); "e" = ("insertText:", "∄");
+            "^f" = ("insertText:", "∀");
+            "^t" = ("insertText:", "⊤");
+            "^b" = ("insertText:", "⊥");
+        };
+        "^i" = {
+        /* in */      "^n" = ("insertText:", "∈");
+        /* iff */     "^f" = { "^f" = ("insertText:", "⟺"); };
+        };
+        "i" = {
+        /* !in */     "n" = ("insertText:", "∉");
+        };
+        "^n" = {
+        /* ni */      "^i" = ("insertText:", "∋");
+        /* !sub/sup */"^s" = ("insertText:", "⊈"); "s"  = ("insertText:", "⊉");
+        /* !Sub/Sup */"S"  = ("insertText:", "⊄"); "^S"  = ("insertText:", "⊅");
+        };
+        "n"  = {
+        /* !ni */     "i" = ("insertText:", "∌");
+        };
+        /* sub/sup */ "^s" = ("insertText:", "⊆"); "s" = ("insertText:", "⊇");
+        /* Sub/Sup */ "S" = ("insertText:", "⊂"); "^S" = ("insertText:", "⊃");
+        /* times */   "^t" = ("insertText:", "×");
+        /* pm/mp */   "^p" = { "^m" = ("insertText:", "±"); }; "^m" = { "^p" = ("insertText:", "∓"); };
+        /* cup/cap */
+        "^c" = {
+        /* cup/cap */ "^u" = ("insertText:", "∪"); "^a" = ("insertText:", "∩");
+        /* circ */    "^i" = ("insertText:", "◦");
+        };
+        /* null */    "^0" = ("insertText:", "∅");
+        /* reals */   "R" = ("insertText:", "ℝ");
+        /* rationals */ "Q" = ("insertText:", "ℚ");
+        /* naturals */ "N" = ("insertText:", "ℕ");
+        /* integers */ "Z" = ("insertText:", "ℤ");
+    };
+    
+    /* Music */
+    "^l" = {
+        "^4" = ("insertText:", "♩");
+        "^8" = ("insertText:", "♪");
+        "8" = ("insertText:", "♪");
+        "6" = ("insertText:", "♬");
+        
+        "^s" = ("insertText:", "♯");
+        "s" = ("insertText:", "𝄪");
+        "^f" = ("insertText:", "♭");
+        "f" = ("insertText:", "𝄫");
+        "^n" = ("insertText:", "♮");
+        
+        "^t" = ("insertText:", "𝄞");
+        "^b" = ("insertText:", "𝄢");
+        "^a" = ("insertText:", "𝄡");
+        
+        "^r" = ("insertText:", "𝄆");
+        "r" = ("insertText:", "𝄇");
+    };
+}
