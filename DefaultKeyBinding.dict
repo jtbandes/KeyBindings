@@ -12,42 +12,41 @@
     /* quote selection */
     "^'" = ("deleteToBeginningOfLine:", "setMark:", "insertText:", "\"", "yank:", "insertText:", "\"", "swapWithMark:", "selectToMark:");
         
-    /* Modifier keys: start with C-m */
+    /* From http://blog.macromates.com/2006/multi-stroke-key-bindings/ and http://pastie.org/4011 */
     "^m" = {
-        "^ "    = ("insertText:", "␣");  /* C-space space */
+        "^ "    = ("insertText:", "␣");  /* space */
         
+        "^e"    = ("insertText:", "↩");  /* return */
+        "e"     = ("insertText:", "⌅");  /* enter */
         
-        "^e"    = ("insertText:", "↩");  /* C-e     return */
-        "e"     = ("insertText:", "⌅");  /* e       enter */
+        "^t"    = ("insertText:", "⇥");  /* tab */
+        "t"     = ("insertText:", "⇤");  /* backtab */
         
-        "^t"    = ("insertText:", "⇥");  /* C-t     tab */
-        "t"     = ("insertText:", "⇤");  /* t       backtab */
+        "^d"    = ("insertText:", "⌫");  /* delete */
+        "d"     = ("insertText:", "⌦");  /* forward delete */
         
-        "^d"    = ("insertText:", "⌫");  /* C-d     delete */
-        "d"     = ("insertText:", "⌦");  /* d       forward delete */
+        "^a"    = ("insertText:", "⌘");  /* command (apple) */
+        "^o"    = ("insertText:", "⌥");  /* option */
+        "^c"    = ("insertText:", "⌃");  /* control */
+        "^s"    = ("insertText:", "⇧");  /* shift */
+        "s"     = ("insertText:", "⇪");  /* caps lock */
         
-        "^a"    = ("insertText:", "⌘");  /* C-a     command (apple) */
-        "^o"    = ("insertText:", "⌥");  /* C-o     option */
-        "^c"    = ("insertText:", "⌃");  /* C-c     control */
-        "^s"    = ("insertText:", "⇧");  /* C-s     shift */
-        "s"     = ("insertText:", "⇪");  /* s       caps lock */
+        "^b"    = ("insertText:", "←");  /* solid left */
+        "^f"    = ("insertText:", "→");  /* solid right */
+        "^p"    = ("insertText:", "↑");  /* solid up */
+        "^n"    = ("insertText:", "↓");  /* solid down */
+        "b"     = ("insertText:", "⇠");  /* dotted left */
+        "f"     = ("insertText:", "⇢");  /* dotted right */
+        "p"     = ("insertText:", "⇡");  /* dotted up */
+        "n"     = ("insertText:", "⇣");  /* dotted down */
         
-        "^b"    = ("insertText:", "←");  /* C-b     solid left */
-        "^f"    = ("insertText:", "→");  /* C-f     solid right */
-        "^p"    = ("insertText:", "↑");  /* C-p     solid up */
-        "^n"    = ("insertText:", "↓");  /* C-n     solid down */
-        "b"     = ("insertText:", "⇠");  /* f       dotted left */
-        "f"     = ("insertText:", "⇢");  /* b       dotted right */
-        "p"     = ("insertText:", "⇡");  /* p       dotted up */
-        "n"     = ("insertText:", "⇣");  /* n       dotted down */
+        "^h"    = ("insertText:", "↖");  /* home */
+        "h"     = ("insertText:", "↘");  /* end */
+        "^u"    = ("insertText:", "⇞");  /* page up */
+        "u"     = ("insertText:", "⇟");  /* page down */
         
-        "^h"    = ("insertText:", "↖");  /* C-h     home */
-        "h"     = ("insertText:", "↘");  /* h       end */
-        "^u"    = ("insertText:", "⇞");  /* C-u     page up */
-        "u"     = ("insertText:", "⇟");  /* u       page down */
-        
-        "^x"    = ("insertText:", "⎋");  /* C-x     escape */ 
-        "x"     = ("insertText:", "⏏");  /* x       eject */ 
+        "^x"    = ("insertText:", "⎋");  /* escape */ 
+        "x"     = ("insertText:", "⏏");  /* eject */
         
         "^/"    = ("insertText:", "‽");  /* interrobang */
         "/"     = ("insertText:", "⸘");  /* upside-down interrobang */
