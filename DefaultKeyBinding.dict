@@ -109,6 +109,7 @@
         };
         "i" = {
         /* !in */     "n" = ("insertText:", "∉");
+        /* iff */     "f" = { "f" = ("insertText:", "⟷"); };
         };
         "^n" = {
         /* ni */      "^i" = ("insertText:", "∋");
