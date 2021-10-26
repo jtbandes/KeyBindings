@@ -30,6 +30,7 @@
         "^c"    = ("insertText:", "⌃");  /* control */
         "^s"    = ("insertText:", "⇧");  /* shift */
         "s"     = ("insertText:", "⇪");  /* caps lock */
+        "^g"    = ("insertText:", "🌐︎"); /* globe (text variant) */
         
         "^b"    = ("insertText:", "←");  /* solid left */
         "^f"    = ("insertText:", "→");  /* solid right */
